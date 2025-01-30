@@ -1,0 +1,31 @@
+{
+  "name": "my-automation-site",
+  "version": "1.0.0",
+  "main": "./index.html",
+  "author": {
+    "email": "hammadfaisal178@gmail.com",
+    "name": "Muhammad Hammad Faisal"
+  },
+  "scripts": {
+    "prettier:write": "npx prettier --write .",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --edit $1"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2"
+  }
+}
