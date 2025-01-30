@@ -1,0 +1,29 @@
+# Node modules (if using a build tool like Vite, Webpack, or Parcel)
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build/Compiled files
+dist/
+build/
+
+# Editor/IDE-specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# MacOS system files
+.DS_Store
+
+# Logs and OS junk
+*.log
+*.swp
+Thumbs.db
+
+# SASS/SCSS cache files
+.sass-cache/
+
+# Ignore generated CSS if using preprocessors like SASS/LESS
+*.map
