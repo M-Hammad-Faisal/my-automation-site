@@ -1,0 +1,100 @@
+body {
+  color: whitesmoke;
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #0d1b2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-container {
+  width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  color: whitesmoke;
+  background-color: #0d1b2a;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+}
+
+button {
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  color: whitesmoke;
+  background-color: #0d1b2a;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #0d1b2a;
+  background-color: whitesmoke;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #0d1b2a;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #0d1b2a;
+  border: 1px solid whitesmoke;
+}
+
+a:active {
+  color: whitesmoke;
+}
+
+.rotate {
+  animation: rotate 0.5s infinite;
+}
+
+a:visited {
+  color: whitesmoke;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
