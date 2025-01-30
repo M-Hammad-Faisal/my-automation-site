@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.event_name == 'push'  # Only deploy on push to main
+    if: github.event_name == 'push' # Only deploy on push to main
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment
