@@ -1,14 +1,20 @@
 {
   "name": "my-automation-site",
   "version": "1.0.0",
+  "type": "module",
   "main": "./index.html",
   "author": {
     "email": "hammadfaisal178@gmail.com",
     "name": "Muhammad Hammad Faisal"
   },
   "scripts": {
-    "prettier:write": "npx prettier --write .",
-    "prepare": "husky"
+    "eslint:check": "eslint .",
+    "eslint:fix": "eslint . --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "proof": "git rev-parse HEAD | cowsay -r",
+    "build": "npm-run-all prettier:check eslint:check proof",
+    "prepare": "husky && husky install"
   },
   "husky": {
     "hooks": {
@@ -17,15 +23,31 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,html,css}": [
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.css": [
       "prettier --write"
     ]
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "husky": "^9.1.7",
+    "@eslint/js": "^9.19.0",
+    "cowsay": "^1.6.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-css": "^0.11.0",
+    "eslint-plugin-html": "^8.1.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.14.0",
+    "husky": "^8.0.0",
     "lint-staged": "^15.4.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2"
   }
 }

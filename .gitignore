@@ -8,6 +8,8 @@ yarn.lock
 # Build/Compiled files
 dist/
 build/
+.eslintcache
+.prettier
 
 # Editor/IDE-specific files
 .vscode/
