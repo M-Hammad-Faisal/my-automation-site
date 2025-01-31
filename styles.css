@@ -16,19 +16,19 @@ h1 {
   flex-shrink: 0;
 }
 
-#login-and-signup {
+.item {
   text-align: center;
   margin-top: 20px;
   font-size: 16px;
 }
 
-#login-and-signup a {
+.item a {
   color: #0d1b2a;
   text-decoration: none;
   font-weight: bold;
 }
 
-#login-and-signup a:hover {
+.item a:hover {
   color: #ff6347;
 }
 
