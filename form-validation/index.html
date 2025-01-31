@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="registrationForm">
+        <h1>Registration Form</h1>
+        <div class="form-group">
+          <div class="form-input">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="error" id="nameError"></div>
+        </div>
+        <div class="form-group">
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+          <div class="form-input">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="error" id="passwordError"></div>
+        </div>
+        <div class="form-group">
+          <div class="form-input">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" required />
+          </div>
+          <div class="error" id="confirmPasswordError"></div>
+        </div>
+        <div class="form-group">
+          <div class="form-input">
+            <label for="age">Age</label>
+            <input type="number" id="age" required min="18" max="99" />
+          </div>
+          <div class="error" id="ageError"></div>
+        </div>
+        <button type="submit" id="submitForm">Submit</button>
+        <div class="success" id="successMessage"></div>
+      </form>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal" id="successModal">
+      <p>🎉 Registration Successful!</p>
+      <button id="closeModal">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
