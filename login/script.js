@@ -35,7 +35,7 @@ document.getElementById("show-login")?.addEventListener("click", function () {
 });
 
 document.getElementById("logout")?.addEventListener("click", function () {
-  window.location.href = "/login/index.html";
+  window.location.href = "index.html";
   rotateContainer();
 });
 
@@ -48,7 +48,7 @@ document
     if (username === "John" && password === "Doe") {
       document.getElementById("login-error").textContent = "";
       document.getElementById("login-error").style.display = "none";
-      window.location.href = "/login/welcome.html";
+      window.location.href = "welcome.html";
       rotateContainer();
     } else if (username === "" || password === "") {
       document.getElementById("login-error").style.display = "flex";
@@ -82,7 +82,7 @@ document
     } else {
       document.getElementById("signup-error").textContent = "";
       document.getElementById("signup-error").style.display = "none";
-      window.location.href = "/login/welcome.html";
+      window.location.href = "welcome.html";
       rotateContainer();
     }
   });
