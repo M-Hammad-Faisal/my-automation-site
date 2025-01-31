@@ -20,40 +20,50 @@ function readySignupForm() {
   document.getElementById("signup-confirm-password").innerText = "";
 }
 
-document.getElementById("show-signup").addEventListener("click", function () {
+document.getElementById("show-signup")?.addEventListener("click", function () {
   document.getElementById("login-form").style.display = "none";
   document.getElementById("signup-form").style.display = "flex";
   readyLoginForm();
   rotateContainer();
 });
 
-document.getElementById("show-login").addEventListener("click", function () {
+document.getElementById("show-login")?.addEventListener("click", function () {
   document.getElementById("signup-form").style.display = "none";
   document.getElementById("login-form").style.display = "flex";
   readySignupForm();
   rotateContainer();
 });
 
+document.getElementById("logout")?.addEventListener("click", function () {
+  window.location.href = "/login/index.html";
+  rotateContainer();
+});
+
 document
   .getElementById("login-form")
-  .addEventListener("submit", function (event) {
+  ?.addEventListener("submit", function (event) {
     event.preventDefault();
     const username = document.getElementById("login-username").value;
     const password = document.getElementById("login-password").value;
     if (username === "John" && password === "Doe") {
       document.getElementById("login-error").textContent = "";
       document.getElementById("login-error").style.display = "none";
-      alert("Login successful!");
-    } else {
+      window.location.href = "/login/welcome.html";
+      rotateContainer();
+    } else if (username === "" || password === "") {
       document.getElementById("login-error").style.display = "flex";
       document.getElementById("login-error").textContent =
         "Please fill in all fields.";
+    } else {
+      document.getElementById("login-error").style.display = "flex";
+      document.getElementById("login-error").textContent =
+        "Username or Password is Incorrect.";
     }
   });
 
 document
   .getElementById("signup-form")
-  .addEventListener("submit", function (event) {
+  ?.addEventListener("submit", function (event) {
     event.preventDefault();
     const username = document.getElementById("signup-username").value;
     const password = document.getElementById("signup-password").value;
@@ -72,6 +82,7 @@ document
     } else {
       document.getElementById("signup-error").textContent = "";
       document.getElementById("signup-error").style.display = "none";
-      alert("Signup successful!");
+      window.location.href = "/login/welcome.html";
+      rotateContainer();
     }
   });
